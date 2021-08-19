@@ -33,6 +33,7 @@ function TaskScreen() {
       finalColorsDummy.push(colorsDummy);
       setFinalColors(finalColorsDummy);
       setInitialTime(120);
+      setStartTimer(false);
     } else {
       let finalColorsDummy = finalColors;
       let colorsDummy = { ...colorsArray };
@@ -41,6 +42,7 @@ function TaskScreen() {
       finalColorsDummy.push(colorsDummy);
       setFinalColors(finalColorsDummy);
       setInitialTime(120);
+      setStartTimer(false);
     }
   };
 
@@ -93,4 +95,3 @@ function TaskScreen() {
 }
 
 export default TaskScreen;
-
