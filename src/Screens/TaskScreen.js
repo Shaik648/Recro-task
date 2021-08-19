@@ -32,6 +32,7 @@ function TaskScreen() {
       colorsDummy.color = "Green";
       finalColorsDummy.push(colorsDummy);
       setFinalColors(finalColorsDummy);
+      setInitialTime(120);
     } else {
       let finalColorsDummy = finalColors;
       let colorsDummy = { ...colorsArray };
@@ -39,6 +40,7 @@ function TaskScreen() {
       colorsDummy.color = "Red";
       finalColorsDummy.push(colorsDummy);
       setFinalColors(finalColorsDummy);
+      setInitialTime(120);
     }
   };
 
@@ -59,7 +61,7 @@ function TaskScreen() {
     startTimer
       ? `${String(Math.floor(initialTime / 60)).padStart(2, "0")}:${String(
           initialTime % 60
-        ).padStart(1, "0")}`
+        ).padStart(2, "0")}`
       : "00:00";
   const RESET_INTERVAL_S = 120; // 120s = 2m * 60s/m
 
@@ -91,3 +93,4 @@ function TaskScreen() {
 }
 
 export default TaskScreen;
+
